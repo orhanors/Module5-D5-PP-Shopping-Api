@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Card, Button } from "react-bootstrap";
 import { getProducts } from "../api/productsApi";
+import Reviews from "./Reviews";
 const ProductList = (props) => {
 	const [products, setProducts] = useState([]);
 	const [loading, setLoading] = useState(false);
+	const [productId, setProductId] = useState("");
+	const [modalShow, setModalShow] = useState(false);
 
 	useEffect(() => {
 		const callMeNow = async () => {
@@ -20,7 +23,12 @@ const ProductList = (props) => {
 		setLoading(false);
 	};
 	return (
-		<div className='product-list'>
+		<div className='product-list mt-4'>
+			<Reviews
+				productId={productId}
+				show={modalShow}
+				onHide={() => setModalShow(false)}
+			/>
 			<Container>
 				<Row>
 					{products.map((product) => {
@@ -28,18 +36,25 @@ const ProductList = (props) => {
 							<Col md={3} key={product._id}>
 								<Card style={{ width: "12rem" }}>
 									<Card.Img
+										style={{
+											width: "100%",
+											height: "10rem",
+										}}
 										variant='top'
-										src='holder.js/100px180'
+										src={`http://localhost:3001/${product._id}.jpg`}
 									/>
 									<Card.Body>
-										<Card.Title>Card Title</Card.Title>
+										<Card.Title>{product.name}</Card.Title>
 										<Card.Text>
-											Some quick example text to build on
-											the card title and make up the bulk
-											of the card's content.
+											{product.description}
 										</Card.Text>
-										<Button variant='primary'>
-											Go somewhere
+										<Button
+											onClick={() => {
+												setProductId(product._id);
+												setModalShow(true);
+											}}
+											variant='primary'>
+											Reviews
 										</Button>
 									</Card.Body>
 								</Card>
