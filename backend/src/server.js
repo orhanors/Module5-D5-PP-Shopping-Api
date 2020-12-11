@@ -2,6 +2,7 @@ const cors = require("cors");
 const express = require("express");
 const listEndpoints = require("express-list-endpoints");
 const products = require("./services/products");
+const { join } = require("path");
 const {
   badRequestHandler,
   notFoundHandler,
@@ -12,10 +13,11 @@ const {
 
 const hostname = "localhost";
 const port = process.env.PORT || 3001;
+const publicImageFile = join(__dirname, "../public/img/products");
 const server = express();
 server.use(cors());
 server.use(express.json());
-
+server.use(express.static(publicImageFile));
 server.use("/products", products);
 
 //ERROR MIDDLEWARE GOES HERE

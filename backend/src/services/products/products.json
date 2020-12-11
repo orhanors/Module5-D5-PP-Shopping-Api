@@ -1,11 +1,1 @@
-[
-	{
-		"name": "product123455",
-		"description": "test",
-		"brand": "just a br",
-		"price": 20,
-		"category": "tech",
-		"_id": "2e8662vokik35f5f",
-		"updatedAt": "2020-12-11T10:02:14.561Z"
-	}
-]
+[{"name":"product123455","description":"test","brand":"just a br","price":20,"category":"tech","_id":"2e8662vokik35f5f","updatedAt":"2020-12-11T10:54:57.121Z","imageUrl":"C:\\Users\\Jin\\Desktop\\Strive\\Module5-D5-PP-Shopping-Api\\backend\\public\\img\\products\\2e8662vokik35f5f.jpg"}]
