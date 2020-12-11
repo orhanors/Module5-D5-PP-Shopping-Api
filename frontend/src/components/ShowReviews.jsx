@@ -25,7 +25,7 @@ const ShowReviews = (props) => {
 	}, [props.submittedSize, deletedSize]);
 	return (
 		<div>
-			<h1 className='text-center mt-3'></h1>
+			<h1 className='text-center mt-3'>Reviews</h1>
 			<ListGroup>
 				{reviews &&
 					reviews.map((rev) => {
