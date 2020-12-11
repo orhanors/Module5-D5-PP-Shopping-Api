@@ -45,7 +45,7 @@ const BackOffice = (props) => {
 		} else {
 			let postedProduct = await postProduct(product);
 			const postImg = await postProductImage(postedProduct._id, image);
-			alert(postImg);
+
 			setSubmittedSize(submittedSize + 1);
 			console.log(postedProduct.errors);
 		}

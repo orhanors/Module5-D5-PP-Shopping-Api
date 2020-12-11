@@ -10,17 +10,23 @@ const Reviews = (props) => {
 	const [review, setReview] = useState({
 		comment: "",
 		rate: 1,
-		elementId: props.productId,
+		elementId: "",
 	});
 	const [submittedSize, setSubmittedSize] = useState(0);
 	const [reviews, setReviews] = useState([]);
 	//const [productId, setProductId] = useState(props.productId);
 
+	useEffect(() => {
+		let newReview = { ...review };
+		newReview.elementId = props.productId;
+		setReview(newReview);
+	}, [props.productId]);
+
 	const addReview = async (e) => {
 		e.preventDefault();
 		if (props.productId) {
 			const postedRev = await postReview(props.productId, review);
-			alert(postedRev);
+			setSubmittedSize(submittedSize + 1);
 		}
 	};
 
@@ -53,7 +59,10 @@ const Reviews = (props) => {
 					onHandleSubmit={addReview}
 					review={review}
 				/>
-				<ShowReviews productId={props.productId} />
+				<ShowReviews
+					submittedSize={submittedSize}
+					productId={props.productId}
+				/>
 			</Modal.Body>
 		</Modal>
 	);
