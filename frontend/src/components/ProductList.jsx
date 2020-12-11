@@ -46,7 +46,8 @@ const ProductList = (props) => {
 									<Card.Body>
 										<Card.Title>{product.name}</Card.Title>
 										<Card.Text>
-											{product.description}
+											{product.description} <br />
+											<strong>${product.price}</strong>
 										</Card.Text>
 										<Button
 											onClick={() => {

@@ -123,9 +123,11 @@ export async function postReview(productId, review) {
 			}
 		);
 		if (response.ok) {
+			alert("successfuly added");
 			let result = response.json();
 			return result;
 		} else {
+			alert("fuck! smthing wrong");
 			let error = response.json();
 			return error;
 		}
