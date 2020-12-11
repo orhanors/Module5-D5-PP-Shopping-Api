@@ -1,1 +1,11 @@
-[{"name":"product123455","description":"test","brand":"just a br","price":20,"category":"tech","_id":"2e8662vokik35f5f","updatedAt":"2020-12-11T10:54:57.121Z","imageUrl":"C:\\Users\\Jin\\Desktop\\Strive\\Module5-D5-PP-Shopping-Api\\backend\\public\\img\\products\\2e8662vokik35f5f.jpg"},{"name":"product2","description":"test","brand":"just a br","price":20,"category":"tech","_id":"2e8662vokxxxxx","updatedAt":"2020-12-11T10:54:57.121Z","imageUrl":"C:\\Users\\Jin\\Desktop\\Strive\\Module5-D5-PP-Shopping-Api\\backend\\public\\img\\products\\2e8662vokik35f5f.jpg"},{"name":"fadfafafd","description":"test","brand":"just a br","price":20,"category":"tech","_id":"42u63s3cekkik9pruw","createdAt":"2020-12-11T12:50:06.535Z"}]
+[
+	{
+		"name": "Google Pixel",
+		"description": "Good phone",
+		"brand": "Google",
+		"price": "7",
+		"category": "Tech",
+		"_id": "2e866h1nkikb2xgn",
+		"createdAt": "2020-12-11T13:28:19.942Z"
+	}
+]
