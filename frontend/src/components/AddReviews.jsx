@@ -2,7 +2,7 @@ import React from "react";
 import { Form, Button, Container } from "react-bootstrap";
 const AddReviews = (props) => {
 	return (
-		<Container>
+		<Container className='add-reviews-form'>
 			<Form onSubmit={props.onHandleSubmit}>
 				<Form.Group>
 					<Form.Label>Comment</Form.Label>
